@@ -1,0 +1,89 @@
+<div class="card">
+    <div class="card-header">Data Registrasi</div>
+    <div class="card-body">
+
+        <form id="myForm" onsubmit="handleFormSubmit(this)">
+            <div id="message"></div>
+            <input type="text" id="RecId" name="RecId" style="display: none">
+
+            <!-- Input type text -->
+            <div class="form-group">
+                <label for="nama">Atas Nama</label>
+                <input type="text" class="form-control" name="nama" id="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="no">C Desa</label>
+                <input type="text" class="form-control" name="no" id="no" required>
+            </div>
+            <div class="form-group">
+                <label for="persil">Persil</label>
+                <input type="text" class="form-control" name="persil" id="persil" required>
+            </div>
+            <div class="form-group">
+                <label for="metode">Sebab Perubahan</label>
+                <input type="text" class="form-control" name="metode" id="metode" required>
+            </div>
+
+        
+            <!-- Input text grid -->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label>Ipeda</label>
+                        <input type="number" name="ipeda" id="ipeda" class="form-control" required>
+                    </div>
+                    <div class="col">
+                    <label>Luas</label>
+                    <div class="input-group">
+                    <input type="number" name="luas" id="luas" class="form-control" placeholder="Masukkan nilai" required>
+                    <select name="satuan" id="satuan" class="form-select" required>
+                      <option value="" disabled selected class="default-option">ha/da</option>
+                    <option value="ha">ha</option>
+                    <option value="da">da</option>
+                    </select>
+                </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Input text grid -->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label>Jenis Klasifikasi</label>
+                        <select class="form-select" name="klasifikasi" id="klasifikasi" required>
+                            <option selected disabled hidden style='display: none' value=''></option>
+                            <option value="Tanah Kering">Tanah Kering</option>
+                            <option value="Sawah">Sawah</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label>Waktu Perubahan</label>
+                        <input type="text" class="form-control" name="waktu" id="waktu" placeholder="Tanggal" onfocus="(this.type = 'date')" required>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Input text grid -->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label>Kelas Desa</label>
+                        <select class="form-select" name="kelas" id="kelas" required>
+                            <option selected disabled hidden style='display: none' value=''></option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+          <div class="form-group">
+          <label for="file1">File</label>
+          <input type="file" class="form-control" name="myFile1" id="myFile1">
+          </div>
+
+        </form>
+
+    </div>
+</div>

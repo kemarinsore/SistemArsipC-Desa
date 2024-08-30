@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* CSS untuk menempatkan container di tengah halaman */
+        .login-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000000; /* Warna latar belakang opsional */
+        }
+        .login-box {
+            max-width: 800px; /* Sesuaikan lebar maksimal form login */
+            width: 100%;
+            padding: 50px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0.1, 0.1, 0.1, 0.1);
+        }
+        footer {
+            text-align: center;
+            font-size: 14px;
+            background-color: white;
+            margin-top: 20px;
+        }
+        footer hr {
+            margin-bottom: 0;
+        }
+        footer p {
+            margin: 2px 0;
+        }
+    </style>
+</head>
+<body>
+    <?var url = myURL();?>
+    <div class="login-page">
+        <div class="login-box">
+            <h2 class="mb-3 text-dark text-center">Login Arsip Letter-C</h2>
+            <h3 class="mb-3 text-dark text-center">Desa Kedung Pomahan Kulon</h3>
+            <div class="bg-white shadow rounded">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-left h-100 py-5 px-5">
+                            <form method="post" action="<?= url ?>" class="row g-4">
+                                <div class="col-12">
+                                    <label>Username<span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                        <input type="text" id="username" class="form-control" name="username" placeholder="Username" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label>Password<span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                        <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" value="Login" name="LoginButton" class="btn btn-success px-4 float-end mt-4">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-end text-secondary mt-3 text-warning"><?= message ?></p>
+
+            <!-- Footer with copyright -->
+            <footer>
+                <hr>
+                <p>&copy; 2024 Sistem Arsip C Desa Kedung Pomahan Kulon || KKN Universitas Islam Indonesia angkatan 69. </p>
+                <p>All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+</body>
+</html>
